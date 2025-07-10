@@ -1,0 +1,137 @@
+.contenido-pagina {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+.contenido-pagina h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #005f73;
+}
+
+.contenido-pagina h2 {
+  font-size: 1.3rem;
+  color: #0a9396;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #94d2bd;
+  padding-bottom: 4px;
+}
+
+.contenido-pagina p {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.contenido-pagina a {
+  color: #ee6c4d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contenido-pagina a:hover,
+.contenido-pagina a:focus {
+  color: #3d5a80;
+  text-decoration: underline;
+}
+
+.formulario-contacto {
+  background: #e0fbfc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 40px;
+}
+
+.formulario-contacto h2 {
+  margin-top: 0;
+  color: #005f73;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.formulario-contacto label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0a9396;
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 2px solid #94d2bd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.formulario-contacto input[type="text"]:focus,
+.formulario-contacto input[type="email"]:focus,
+.formulario-contacto textarea:focus {
+  border-color: #005f73;
+  outline: none;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: #ee6c4d;
+  color: white;
+  font-weight: 700;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  background-color: #3d5a80;
+  outline: none;
+}
+
+.correo-opciones p {
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+.correo-opciones a {
+  color: #ee6c4d;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 8px;
+}
+
+.correo-opciones a:hover,
+.correo-opciones a:focus {
+  text-decoration: underline;
+  color: #3d5a80;
+  outline: none;
+}
+
+
+/* Responsive */
+@media (max-width: 480px) {
+  .contenido-pagina {
+    padding: 0 15px;
+  }
+
+  .contenido-pagina h1 {
+    font-size: 2rem;
+  }
+
+  .formulario-contacto h2 {
+    font-size: 1.5rem;
+  }
+}
