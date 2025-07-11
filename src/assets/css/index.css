@@ -1,0 +1,555 @@
+/* index.css */
+
+.hero-slider,
+.hero-slider-full {
+    position: relative;
+    height: 60vh;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.slider-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slider-fondo .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slider-fondo .slide.activo {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hero-slider .hero-contenido,
+.hero-slider-full .hero-contenido {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #23272f;
+    width: 100%;
+    background: rgba(255,255,255,0.85);
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    max-width: 600px;
+    margin: auto;
+}
+
+.presentacion-cuadro {
+    background: #fdfaf7;
+    border: 2px solid #ff8c32;
+    border-radius: 28px;
+    padding: 38px 38px 28px 38px;
+    max-width: 900px;
+    margin: 40px auto 50px auto;
+    box-shadow: 0 2px 16px rgba(255,140,50,0.06);
+    color: #23272f;
+}
+
+.presentacion-cuadro h2 {
+    color: #ff6b3d;
+    font-size: 2em;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.presentacion-cuadro .eslogan {
+    color: #ff8c32;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin: 18px 0;
+    border-left: 4px solid #ff8c32;
+    padding-left: 12px;
+}
+
+.ventajas-numeradas {
+    counter-reset: ventaja;
+    margin: 32px 0 24px 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.ventajas-numeradas li {
+    position: relative;
+    padding-left: 48px;
+    font-size: 1.13em;
+    color: #23272f;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.ventajas-numeradas li::before {
+    counter-increment: ventaja;
+    content: counter(ventaja);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 2px solid #ff8c32;
+    color: #ff8c32;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+}
+
+/* Carrusel y ventajas */
+.seccion-ventajas {
+    background: #0c232a;
+    padding: 80px 0;
+    min-height: 520px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seccion-ventajas h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+.coverflow-carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 340px;
+    margin: 0 auto 40px auto;
+    perspective: 1200px;
+    overflow: visible;
+}
+
+.coverflow-carrusel .ventaja {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 270px;
+    height: 320px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    padding: 30px 20px;
+    text-align: center;
+    transform: translateX(-50%) scale(0.7);
+    opacity: 0.5;
+    transition: transform 0.5s cubic-bezier(.4,2,.6,1), opacity 0.5s, z-index 0s;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.coverflow-carrusel .ventaja.active {
+    transform: translateX(-50%) scale(1) rotateY(0deg);
+    opacity: 1;
+    z-index: 3;
+    pointer-events: auto;
+}
+
+.coverflow-carrusel .ventaja.left {
+    transform: translateX(-140%) scale(0.8) rotateY(30deg);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.coverflow-carrusel .ventaja.right {
+    transform: translateX(40%) scale(0.8) rotateY(-30deg);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.coverflow-carrusel .ventaja.far-left,
+.coverflow-carrusel .ventaja.far-right {
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.coverflow-carrusel .ventaja.far-left {
+    transform: translateX(-220%) scale(0.6) rotateY(40deg);
+}
+
+.coverflow-carrusel .ventaja.far-right {
+    transform: translateX(120%) scale(0.6) rotateY(-40deg);
+}
+
+.coverflow-flecha {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    background: #ffd932;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: background 0.2s;
+    opacity: 0.85;
+}
+
+.coverflow-flecha.izq {
+    left: 40px;
+}
+
+.coverflow-flecha.der {
+    right: 40px;
+}
+
+.coverflow-flecha:hover {
+    background: #e6761b;
+}
+
+.btn-cta{
+    display: inline-block;
+    background: #ffd932;
+    color: #000000;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-cta:hover {
+    background: #ecc101;
+    transform: translateY(-2px);
+}
+
+.bloque-expertos {
+    max-width: 1100px;
+    margin: 60px auto 0 auto;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+    padding: 38px 28px;
+}
+
+.expertos-contenido {
+    display: flex;
+    gap: 38px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.expertos-imagen {
+    flex: 1 1 320px;
+    min-width: 260px;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);}
+
+.expertos-imagen img {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 14px;
+    height: 800px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    object-fit: cover;
+}
+
+.expertos-info {
+    flex: 2 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.bloque-expertos h2 {
+    color: #23272f;
+    font-size: 1.7em;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.expertos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+    border-radius: 10%;
+}
+
+.experto-card {
+    background: #fff3e6;
+    border-radius: 22px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 24px auto;
+    padding: 24px 32px;
+    overflow: visible; /* Mostrar todo el contenido */
+    transition: box-shadow 0.2s;
+}
+
+.experto-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+.experto-header {
+    padding: 0;
+    color: #4d4d4d;
+    font-size: 1.3em;
+    font-weight: 700;
+    cursor: default; /* No cambia el cursor */
+    border-bottom: none;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.experto-plus {
+    display: none; /* Oculto el icono de desplegar */
+}
+
+.experto-answer {
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 16px 0 0 0; /* Para separar del título */
+    display: block !important;
+}
+
+
+
+/* --- SECCION FAQ --- */
+
+.seccion-faq {
+    background: #0c232a;
+    color: #fff;
+    padding: 80px 0;
+    min-height: 520px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 3%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seccion-faq h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+.faq-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px 30px;
+}
+
+.faq-card {
+    background: #fff3e6;
+    border-radius: 22px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    text-align: center;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #4d4d4d;
+    font-size: 1.13em;
+    font-weight: 700;
+    text-align: left;
+    padding: 18px 18px 18px 24px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s;
+    border-bottom: 1px solid #ececec;
+    font-family: inherit;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+}
+
+.faq-question.abierto,
+.faq-question:hover {
+    background: #ffd932;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #fff;
+    color: #23272f;
+    font-size: 1em;
+    padding: 0 24px;
+    transition: max-height 0.35s cubic-bezier(.4,2,.6,1), padding 0.2s;
+    text-align: center;
+    font-family: inherit;
+}
+
+.faq-answer.abierto {
+    max-height: 300px;
+    padding: 16px 24px 18px 24px;
+}
+
+.faq-plus {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 8px;
+    vertical-align: middle;
+    transition: transform 0.8s cubic-bezier(.4,2,.6,1);
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.faq-question.abierto .faq-plus {
+    transform: rotate(180deg);
+}
+
+.inx {
+    font-size: 4em;
+    color: #ff8c32;
+    font-weight: bold;
+    margin-right: 50%;
+    display: inline-block;
+    width: 32px;
+    text-align: center;
+}
+
+.elegir{
+    width: 100%;
+    max-width: 360px;
+    height: 130px;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    object-fit: cover;
+}
+
+/* --- Responsive básico para móviles y tablets --- */
+
+@media (max-width: 1200px) {
+    .faq-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 740px) {
+    .faq-list {
+        grid-template-columns: 1fr;
+    }
+
+    .coverflow-carrusel {
+        height: 260px;
+    }
+
+    .coverflow-carrusel .ventaja {
+        width: 200px;
+        height: 260px;
+        padding: 24px 12px;
+    }
+
+    .bloque-expertos {
+        padding: 28px 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .experto-card {
+        padding: 18px 20px;
+    }
+
+    .hero-slider,
+    .hero-slider-full {
+        height: 40vh;
+        min-height: 200px;
+    }
+
+    .presentacion-cuadro {
+        padding: 24px 20px 18px 20px;
+        max-width: 100%;
+        margin: 20px auto 30px auto;
+    }
+
+    .hero-slider .hero-contenido,
+    .hero-slider-full .hero-contenido {
+        padding: 30px 15px;
+        max-width: 90%;
+    }
+}
+
+@media (max-height: 500px) {
+    .hero-slider,
+    .hero-slider-full {
+        min-height: 240px;
+    }
+}
+
+
+
+.experto-detalle {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 20px; /* padding lateral para que no quede pegado */
+  font-size: 1em;
+  color: #23272f;
+}
+
+.experto-detalle.activo {
+  max-height: 200px; /* o el tamaño suficiente para mostrar todo */
+  padding: 16px 20px;
+}
