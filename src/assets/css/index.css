@@ -1,0 +1,546 @@
+/* index.css - BefEnergy */
+
+/* --- HERO SLIDER --- */
+.hero-slider,
+.hero-slider-full {
+    position: relative;
+    height: 60vh;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.slider-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.slider-fondo .slide,
+.slider-fondo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: high-quality;
+}
+.slider-fondo .slide.activo,
+.slider-fondo img.activo {
+    opacity: 1;
+    z-index: 2;
+}
+.hero-slider .hero-contenido,
+.hero-slider-full .hero-contenido {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #23272f;
+    width: 100%;
+    background: rgba(255,255,255,0.85);
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    max-width: 600px;
+    margin: auto;
+}
+
+/* --- PRESENTACION CUADRO --- */
+.presentacion-cuadro {
+    background: #fdfaf7;
+    border: 2px solid #ff8c32;
+    border-radius: 28px;
+    padding: 38px 38px 28px 38px;
+    max-width: 900px;
+    margin: 40px auto 50px auto;
+    box-shadow: 0 2px 16px rgba(255,140,50,0.06);
+    color: #23272f;
+}
+.presentacion-cuadro h2 {
+    color: #ff6b3d;
+    font-size: 2em;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+.presentacion-cuadro .eslogan {
+    color: #ff8c32;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin: 18px 0;
+    border-left: 4px solid #ff8c32;
+    padding-left: 12px;
+}
+.ventajas-numeradas {
+    counter-reset: ventaja;
+    margin: 32px 0 24px 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.ventajas-numeradas li {
+    position: relative;
+    padding-left: 48px;
+    font-size: 1.13em;
+    color: #23272f;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.ventajas-numeradas li::before {
+    counter-increment: ventaja;
+    content: counter(ventaja);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 2px solid #ff8c32;
+    color: #ff8c32;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+}
+
+/* --- SECCION VENTAJAS (COVERFLOW) --- */
+.seccion-ventajas {
+    background: #0c232a;
+    padding: 80px 0;
+    min-height: 520px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.seccion-ventajas h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+.coverflow-carrusel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    perspective: 1200px;
+    overflow: visible;
+}
+.ventajas-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+    min-height: 340px;
+}
+.coverflow-carrusel .ventaja {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 270px;
+    height: 320px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    padding: 30px 20px;
+    text-align: center;
+    transform: translateX(-50%) scale(0.7);
+    opacity: 0.5;
+    transition: transform 0.5s cubic-bezier(.4,2,.6,1), opacity 0.5s, z-index 0s;
+    z-index: 1;
+    pointer-events: none;
+}
+.coverflow-carrusel .ventaja.active {
+    transform: translateX(-50%) scale(1) rotateY(0deg);
+    opacity: 1;
+    z-index: 3;
+    pointer-events: auto;
+}
+.coverflow-carrusel .ventaja.left {
+    transform: translateX(-140%) scale(0.8) rotateY(30deg);
+    opacity: 0.7;
+    z-index: 2;
+}
+.coverflow-carrusel .ventaja.right {
+    transform: translateX(40%) scale(0.8) rotateY(-30deg);
+    opacity: 0.7;
+    z-index: 2;
+}
+.coverflow-carrusel .ventaja.far-left {
+    transform: translateX(-220%) scale(0.6) rotateY(40deg);
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+}
+.coverflow-carrusel .ventaja.far-right {
+    transform: translateX(120%) scale(0.6) rotateY(-40deg);
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+}
+.ventaja-img {
+    width: 100%;
+    max-width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin: 16px auto 8px auto;
+    display: block;
+    background: #fff;
+    border: 2px solid #ececec;
+}
+
+/* --- FLECHAS COVERFLOW --- */
+.coverflow-flechas-abajo {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 48px;
+    position: static;
+    z-index: 10;
+}
+.coverflow-flecha {
+    font-size: 2rem;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.coverflow-flecha:hover {
+    background: #e6761b;
+}
+
+/* --- BOTÓN CTA --- */
+.btn-cta {
+    display: inline-block;
+    background: #ffd932;
+    color: #000000;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+.btn-cta:hover {
+    background: #ecc101;
+    transform: translateY(-2px);
+}
+
+/* --- BLOQUE EXPERTOS --- */
+.bloque-expertos {
+    max-width: 1100px;
+    margin: 60px auto 0 auto;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+    padding: 38px 28px;
+}
+.expertos-contenido {
+    display: flex;
+    gap: 38px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.expertos-info {
+    flex: 2 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bloque-expertos h2 {
+    color: #23272f;
+    font-size: 1.7em;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+.expertos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.experto-card {
+    display: flex;
+    align-items: center;
+    background: #fff3e6;
+    border-radius: 18px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    padding: 24px 18px;
+    transition: box-shadow 0.2s;
+    min-height: 120px;
+}
+.experto-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+.experto-card.vertical {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #fff3e6;
+    border-radius: 18px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    padding: 24px 18px;
+    min-height: 220px;
+    display: flex;
+    justify-content: flex-start;
+}
+.experto-card.vertical .experto-img {
+    margin: 0 0 14px 0;
+    width: 64px;
+    height: 64px;
+}
+.experto-card.vertical .experto-header {
+    margin: 0 0 10px 0;
+    font-size: 1.15rem;
+    color: #ff8c32;
+    font-weight: 600;
+}
+.experto-card.vertical .experto-answer {
+    margin: 0;
+    font-size: 1rem;
+    color: #23272f;
+    line-height: 1.5;
+}
+.experto-img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    background: #e0f7fa;
+    flex-shrink: 0;
+}
+.experto-header {
+    font-size: 1.15rem;
+    color: #ff8c32;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-right: 28px;
+    min-width: 160px;
+}
+.experto-answer {
+    font-size: 1rem;
+    color: #23272f;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+.experto-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* --- FAQ --- */
+.seccion-faq {
+    background: #0c232a;
+    color: #fff;
+    padding: 80px 0;
+    min-height: 520px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 3%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.seccion-faq h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+.faq-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px 30px;
+}
+.faq-card {
+    background: #fff3e6;
+    border-radius: 22px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    text-align: center;
+}
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #4d4d4d;
+    font-size: 1.13em;
+    font-weight: 700;
+    text-align: left;
+    padding: 18px 18px 18px 24px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s;
+    border-bottom: 1px solid #ececec;
+    font-family: inherit;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+}
+.faq-question.abierto,
+.faq-question:hover {
+    background: #ffd932;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #fff;
+    color: #23272f;
+    font-size: 1em;
+    padding: 0 24px;
+    transition: max-height 0.35s cubic-bezier(.4,2,.6,1), padding 0.2s;
+    text-align: center;
+    font-family: inherit;
+}
+.faq-answer.abierto {
+    max-height: 300px;
+    padding: 16px 24px 18px 24px;
+}
+.faq-plus {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 8px;
+    vertical-align: middle;
+    transition: transform 0.8s cubic-bezier(.4,2,.6,1);
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    pointer-events: none;
+}
+.faq-question.abierto .faq-plus {
+    transform: rotate(180deg);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1200px) {
+    .faq-list { grid-template-columns: repeat(2, 1fr); }
+    .coverflow-carrusel { max-width: 95vw; }
+    .bloque-expertos { max-width: 95vw; }
+}
+@media (max-width: 900px) {
+    .presentacion-cuadro { max-width: 98vw; padding: 20px 10px; }
+    .seccion-ventajas { padding: 40px 0; }
+    .elegir-lista { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 18px; max-width: 98vw; }
+    .elegir { max-width: 220px; min-width: 120px; height: 100px; }
+    .expertos-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 18px; }
+    .experto-card { flex-direction: row; padding: 14px 8px; }
+    .experto-img { margin-right: 12px; }
+    .bloque-expertos { padding: 28px 8px; max-width: 99vw; }
+    .expertos-contenido { flex-direction: column; gap: 18px; }
+    .expertos-imagen, .expertos-info { max-width: 100vw; }
+}
+@media (max-width: 740px) {
+    .faq-list { grid-template-columns: 1fr; }
+    .coverflow-carrusel { height: 260px; max-width: 98vw; }
+    .coverflow-carrusel .ventaja { width: 200px; height: 260px; padding: 24px 12px; }
+    .coverflow-flechas-abajo {
+        gap: 14px;
+        margin-top: 18px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+    }
+    .coverflow-flecha {
+        width: 38px;
+        height: 38px;
+        font-size: 1.5rem;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .coverflow-flecha:hover {
+        background: #e6761b;
+    }
+    .expertos-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .experto-card.vertical {
+        min-height: 160px;
+        padding: 16px 8px;
+    }
+}
+@media (max-width: 600px) {
+    .experto-card { padding: 12px 8px; max-width: 98vw; }
+    .hero-slider, .hero-slider-full { height: 40vh; min-height: 160px; }
+    .presentacion-cuadro { padding: 16px 6px 12px 6px; max-width: 100vw; margin: 10px auto 18px auto; }
+    .hero-slider .hero-contenido, .hero-slider-full .hero-contenido { padding: 18px 6px; max-width: 98vw; }
+    .seccion-ventajas h2, .seccion-faq h2 { font-size: 1.3em; margin-bottom: 18px; }
+}
+@media (max-width: 480px) {
+    .faq-card { border-radius: 12px; padding: 0 2px; }
+    .faq-question { font-size: 1em; padding: 12px 8px 12px 12px; }
+    .faq-answer.abierto { padding: 10px 8px 12px 8px; }
+    .coverflow-carrusel .ventaja { width: 98vw; height: auto; padding: 10px 2px; border-radius: 10px; }
+    .bloque-expertos { padding: 10px 2px; border-radius: 10px; }
+    .expertos-imagen img { max-width: 98vw; height: auto; border-radius: 10px; }
+    .experto-card { padding: 8px 2px; border-radius: 10px; }
+    .seccion-ventajas, .seccion-faq { padding: 18px 0; min-height: 320px; }
+    .coverflow-flechas-abajo {
+        gap: 10px;
+        margin-top: 16px;
+    }
+    .coverflow-flecha {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+}
