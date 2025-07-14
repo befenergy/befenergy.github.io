@@ -1,0 +1,270 @@
+/* servicios.css - BefEnergy */
+
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- BASE --- */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #fff;
+    color: #23272f;
+    line-height: 1.6;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.contenido-pagina {
+    width: 100%;
+    margin: 60px auto 40px auto;
+    padding: 38px 18px;
+    background: #fff;
+    max-width: 1100px;
+}
+
+.contenido-pagina h1 {
+    text-align: center;
+    color: #ffd932;
+    font-size: 2.4em;
+    margin-bottom: 48px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* --- BLOQUES DE SERVICIO --- */
+.servicio-bloque {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #0d1f23;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.servicio-bloque:nth-child(even) {
+    background-color: #f6f3f0;
+    color: #0d1f23;
+}
+
+/* --- MEDIA (IMAGEN/VIDEO) --- */
+.servicio-media {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: transparent;
+}
+
+.servicio-media img,
+.servicio-media video {
+    max-width: 100%;
+    max-height: 380px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- INFORMACIÓN DEL SERVICIO --- */
+.servicio-info {
+    padding: 40px 50px 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.servicio-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.servicio-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.servicio-info ul {
+    padding-left: 20px;
+    margin-bottom: 24px;
+    margin-left: 10px;
+}
+
+.servicio-info ul li {
+    list-style: disc;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.servicio-info a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ff4d00;
+    text-decoration: none;
+    margin-top: auto;
+    transition: all 0.2s;
+}
+
+.servicio-info a:hover {
+    text-decoration: underline;
+}
+
+/* --- BENEFICIOS NUMERADOS --- */
+.servicio-beneficios {
+    counter-reset: ventaja;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 800px;
+    margin: 32px 0 0 0;
+    padding: 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.servicio-beneficios li {
+    position: relative;
+    padding-left: 48px;
+    font-size: 1.13em;
+    color: #23272f;
+    font-weight: 500;
+    line-height: 1.5;
+    background: rgba(255, 140, 50, 0.12);
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+    transition: color 0.2s, background 0.2s;
+}
+
+.servicio-beneficios li::before {
+    counter-increment: ventaja;
+    content: counter(ventaja);
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 2px solid #ff8c32;
+    color: #ff8c32;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- CALEFACCIÓN --- */
+.servicio-calefaccion {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ff8c32;
+}
+
+.servicio-calefaccion h3 {
+    font-size: 1.4rem;
+    color: #ff8c32;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.servicio-calefaccion p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.servicio-calefaccion ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #23272f;
+}
+
+.servicio-calefaccion ul li {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+/* --- TEXTO EXTRA --- */
+.servicio-texto {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.servicio-texto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.servicio-texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.servicio-texto a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ff4d00;
+    text-decoration: none;
+    margin-top: auto;
+    transition: all 0.2s;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .servicio-bloque {
+        grid-template-columns: 1fr;
+    }
+    .servicio-info {
+        padding: 28px 20px;
+    }
+    .servicio-media {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido-pagina {
+        margin: 40px 12px 20px 12px;
+        padding: 28px 12px;
+    }
+    .contenido-pagina h1 {
+        font-size: 2rem;
+    }
+    .servicio-info h2 {
+        font-size: 1.4rem;
+    }
+    .servicio-info p,
+    .servicio-info ul li {
+        font-size: 1rem;
+    }
+    .servicio-beneficios li::before {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9em;
+    }
+}

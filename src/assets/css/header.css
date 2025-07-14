@@ -1,0 +1,123 @@
+/* header.css - BefEnergy */
+
+/* --- ESTRUCTURA BÁSICA --- */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #23272f;
+  padding: 0 40px;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+/* --- MENÚ --- */
+.cabecera nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.cabecera nav a {
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cabecera nav a:hover,
+.btn-presupuesto:hover {
+  background: #ecc101;
+  color: #000000;
+}
+
+.btn-presupuesto {
+  background: #ffd932;
+  color: #000000 !important;
+  font-weight: bold;
+}
+
+/* --- MENÚ HAMBURGUESA --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Animaciones para hamburguesa activa */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .cabecera {
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .cabecera nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #23272f;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  .cabecera nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cabecera nav.show {
+    display: flex;
+  }
+}
