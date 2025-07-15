@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title data-i18n="contacto_titulo_pagina">BefEnergy - Contacto</title>
+    <link rel="icon" href="../assets/media/fondo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/comun.css" />
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/contacto.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/7dd1470b26.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="logo" onclick="window.location.href='index.html'">
+            <img src="../assets/media/fondo.png" alt="BefEnergy Logo">
+            <span data-i18n="logo_nombre">BefEnergy</span>
+        </div>
+        <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html" data-i18n="inicio">Inicio</a></li>
+                <li><a href="servicios.html" data-i18n="servicios">Servicios</a></li>
+                <li><a href="sobre-nosotros.html" data-i18n="sobre">Sobre Nosotros</a></li>
+                <li class="active"><a href="contacto.html" data-i18n="contacto">Contacto</a></li>
+                <li><a href="presupuesto-contacto.html" class="btn-presupuesto" data-i18n="presupuesto">Consigue tu presupuesto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-slider hero-slider-full">
+            <div class="slider-fondo" id="sliderFondo">
+                <img src="../assets/media/hablamos.jpg" class="slide activo" alt="Energía 1" />
+            </div>
+            <div class="hero-contenido">
+                <h1 class="titulo-centrado" data-i18n="contacto_hero_titulo">¿Hablamos?</h1>
+                <h1 data-i18n="contacto_hero_subtitulo">Contáctanos para una <span class="naranja">atención rápida y personalizada</span>.</h1>
+            </div>
+        </section>
+        <section class="contenido-pagina contacto-section">
+            <h2 class="titulo-contacto" data-i18n="contacto_facil_titulo">Contáctanos fácilmente</h2>
+            <div class="contacto-grid">
+                <div class="contacto-box contacto-box-flex">
+                    <img src="../assets/media/correo-electronico.png" alt="Correo" class="contacto-icono" />
+                    <div class="contacto-box-content">
+                        <h3 data-i18n="contacto_correo_titulo">Correo electrónico</h3>
+                        <p><a href="mailto:admin@befenergy.com" data-i18n="contacto_correo_email">admin@befenergy.com</a></p>
+                    </div>
+                </div>
+                <div class="contacto-box contacto-box-flex">
+                    <img src="../assets/media/contacto-phone.png" alt="Teléfono" class="contacto-icono" />
+                    <div class="contacto-box-content">
+                        <h3 data-i18n="contacto_telefono_titulo">Teléfono</h3>
+                        <p><a href="tel:+34931315636" data-i18n="contacto_telefono_num">+34 93 131 56 36</a></p>
+                    </div>
+                </div>
+                <div class="contacto-box contacto-box-flex">
+                    <img src="../assets/media/contacto-location.png" alt="Dirección" class="contacto-icono" />
+                    <div class="contacto-box-content">
+                        <h3 data-i18n="contacto_direccion_titulo">Dirección</h3>
+                        <p data-i18n="contacto_direccion_texto">Carrer d'Itàlia, 2, nau 2,<br>08700 Igualada, Barcelona</p>
+                    </div>
+                </div>
+                <div class="contacto-box contacto-box-flex">
+                    <img src="../assets/media/reloj.png" alt="Horario" class="contacto-icono" />
+                    <div class="contacto-box-content">
+                        <h3 data-i18n="contacto_horario_titulo">Horario</h3>
+                        <p><strong data-i18n="contacto_horario_lunes">Lunes a Viernes:</strong> <span data-i18n="contacto_horario_semana">7:00 – 13:00 | 15:00 – 17:00</span></p>
+                        <p><strong data-i18n="contacto_horario_sabados">Sábados y Domingos:</strong> <span data-i18n="contacto_horario_cerrado">Cerrado</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="correo-opciones">
+                <h2 data-i18n="contacto_prefieres_correo">¿Prefieres enviarnos un correo?</h2>
+                <p>
+                    <a class="btn-correo" href="mailto:admin@befenergy.com" data-i18n="contacto_btn_cliente">Usar cliente de correo</a>
+                    <a class="btn-correo" href="https://mail.google.com/mail/?view=cm&fs=1&to=admin@befenergy.com" target="_blank" rel="noopener" data-i18n="contacto_btn_gmail">Abrir Gmail</a>
+                </p>
+            </div>
+            <div class="redes-sociales">
+                <h3 data-i18n="contacto_siguenos">¡Síguenos en redes sociales!</h3>
+                <p>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/befenergy" title="Twitter/X" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="pie">
+        <div class="pie-contenido">
+            <div class="pie-col">
+                <h4 data-i18n="footer_contacto">Contacto</h4>
+                <p data-i18n="footer_email">admin@befenergy.com</p>
+                <a href="tel:+34931315636" data-i18n="footer_telefono">+34 93 131 56 36</a>
+            </div>
+            <div class="pie-col">
+                <h4 data-i18n="footer_leido">Lo más leído</h4>
+                <a href="index.html#faq" data-i18n="footer_faq">Preguntas frecuentes</a>
+            </div>
+            <div class="pie-col">
+                <h4 data-i18n="footer_unete">Únete</h4>
+                <a href="contacto.html#cont" data-i18n="footer_trabaja">Trabaja con nosotros</a>
+            </div>
+            <div class="pie-col">
+                <h4 data-i18n="footer_siguenos">Síguenos</h4>
+                <a href="https://x.com/befenergy" target="_blank" rel="noopener" data-i18n="footer_twitter">Twitter</a>
+            </div>
+        </div>
+        <div class="copyright" data-i18n="footer_copyright">
+            © 2025 BefEnergy. Todos los derechos reservados.
+        </div>
+    </footer>
+
+            <!-- Botón flotante de idioma -->
+            <div class="idioma-float">
+            <button class="idioma-float-btn" id="idiomaFloatBtn" aria-label="Seleccionar idioma">
+                <img id="idiomaFloatIcon" src="../assets/media/flags/es.svg" alt="Idioma actual" class="idioma-float-bandera">
+            </button>
+            <div class="idioma-float-menu" id="idiomaFloatMenu">
+                <button class="idioma-float-opcion" data-lang="es" aria-label="Español">
+                <img src="../assets/media/flags/es.svg" alt="Español" class="idioma-float-bandera">
+                </button>
+                <button class="idioma-float-opcion" data-lang="ca" aria-label="Català">
+                <img src="../assets/media/flags/ca.svg" alt="Català" class="idioma-float-bandera">
+                </button>
+                <button class="idioma-float-opcion" data-lang="en" aria-label="English">
+                <img src="../assets/media/flags/gb.svg" alt="English" class="idioma-float-bandera">
+                </button>
+            </div>
+            </div>
+
+
+    <!-- Scripts -->
+
+
+    <script src="../assets/js/slider.js"></script>
+    <script src="../assets/js/coverflow.js"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/idioma-switch.js"></script>
+</body>
+</html>
