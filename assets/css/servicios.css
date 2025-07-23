@@ -1,0 +1,341 @@
+/* servicios.css - BefEnergy */
+
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- BASE --- */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #fff;
+    color: #23272f;
+    line-height: 1.6;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.contenido-pagina {
+    width: 100%;
+    margin: 60px auto 40px auto;
+    padding: 38px 18px;
+    background: #fff;
+    max-width: 1100px;
+}
+
+.contenido-pagina h1 {
+    text-align: center;
+    color: #ffd932;
+    font-size: 2.4em;
+    margin-bottom: 48px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* --- BLOQUES DE SERVICIO --- */
+.servicio-bloque {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #0d1f23;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Estils base per imatge i text dins servei */
+.servicio-imagen {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.servicio-texto {
+    order: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+/* Control ordre per classes img-left i img-right */
+.servicio-bloque.img-left .servicio-imagen {
+    order: 1;
+}
+.servicio-bloque.img-left .servicio-texto {
+    order: 2;
+}
+
+.servicio-bloque.img-right .servicio-imagen {
+    order: 2;
+}
+.servicio-bloque.img-right .servicio-texto {
+    order: 1;
+}
+
+/* Estil alternatiu per fila parell (segons el teu original) */
+.servicio-bloque:nth-child(even) {
+    background-color: #f6f3f0;
+    color: #0d1f23;
+}
+
+/* --- MEDIA (IMAGEN/VIDEO) --- */
+.servicio-imagen img,
+.servicio-imagen video {
+    max-width: 100%;
+    max-height: 380px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.servicio-imagen:hover img,
+.servicio-imagen:hover video {
+    transform: scale(1.05);
+}
+
+/* --- INFORMACIÓN DEL SERVICIO --- */
+.servicio-texto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.servicio-texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.servicio-texto ul {
+    padding-left: 20px;
+    margin-bottom: 24px;
+    margin-left: 10px;
+}
+
+.servicio-texto ul li {
+    list-style: disc;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.servicio-texto a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ff4d00;
+    text-decoration: none;
+    margin-top: auto;
+    transition: all 0.2s ease;
+}
+
+.servicio-texto a:hover {
+    text-decoration: underline;
+}
+
+/* --- BENEFICIOS NUMERADOS --- */
+.servicio-beneficios {
+    counter-reset: ventaja;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 800px;
+    margin: 32px 0 0 0;
+    padding: 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.servicio-beneficios li {
+    position: relative;
+    padding-left: 48px;
+    font-size: 1.13em;
+    color: #23272f;
+    font-weight: 500;
+    line-height: 1.5;
+    background: rgba(255, 140, 50, 0.12);
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+    transition: color 0.2s, background 0.2s;
+}
+
+.servicio-beneficios li::before {
+    counter-increment: ventaja;
+    content: counter(ventaja);
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 2px solid #ff8c32;
+    color: #ff8c32;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- CALEFACCIÓN --- */
+.servicio-calefaccion {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ff8c32;
+}
+
+.servicio-calefaccion h3 {
+    font-size: 1.4rem;
+    color: #ff8c32;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.servicio-calefaccion p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.servicio-calefaccion ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #23272f;
+}
+
+.servicio-calefaccion ul li {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+/* --- TEXTO EXTRA --- */
+.servicio-texto {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.servicio-texto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.servicio-texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.servicio-texto a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ff4d00;
+    text-decoration: none;
+    margin-top: auto;
+    transition: all 0.2s;
+}
+
+/* --- ESTADÍSTICAS --- */
+.servicio-estadisticas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 30px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    padding: 30px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.estadistica-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.numero-contador {
+    font-size: 3rem;
+    color: #ffd932;
+    font-weight: bold;
+}
+
+.grafica-proyectos {
+    margin: 60px auto;
+    text-align: center;
+}
+
+.grafica-proyectos h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #ff8c32;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .servicio-bloque {
+        grid-template-columns: 1fr;
+    }
+    /* Orden normal per dispositius petits: foto sobre text */
+    .servicio-bloque:nth-child(odd) .servicio-imagen,
+    .servicio-bloque:nth-child(even) .servicio-imagen {
+        order: 0;
+    }
+    .servicio-bloque:nth-child(odd) .servicio-texto,
+    .servicio-bloque:nth-child(even) .servicio-texto {
+        order: 1;
+    }
+    .servicio-texto {
+        padding: 28px 20px;
+    }
+    .servicio-imagen {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido-pagina {
+        margin: 40px 12px 20px 12px;
+        padding: 28px 12px;
+    }
+    .contenido-pagina h1 {
+        font-size: 2rem;
+    }
+    .servicio-texto h2 {
+        font-size: 1.4rem;
+    }
+    .servicio-texto p,
+    .servicio-texto ul li {
+        font-size: 1rem;
+    }
+    .servicio-beneficios li::before {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9em;
+    }
+}
