@@ -1,0 +1,353 @@
+/* --- BASE --- */
+.sobre-nosotros {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+/* --- TITULOS Y TEXTO --- */
+.sobre-nosotros h1 {
+    font-size: 2.5rem;
+    color: #0077cc;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+.sobre-nosotros p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.sobre-nosotros strong {
+    color: #005fa3;
+}
+
+/* --- IMAGENES Y LISTAS --- */
+.sobre-nosotros img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+.sobre-nosotros ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.sobre-nosotros ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* --- ENLACES --- */
+.sobre-nosotros a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 600;
+}
+.sobre-nosotros a:hover {
+    text-decoration: underline;
+}
+
+/* --- EQUIPO --- */
+.sobre-nosotros .team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.sobre-nosotros .team-member {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+}
+.sobre-nosotros .team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.sobre-nosotros .team-member h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+.sobre-nosotros .team-member p {
+    font-size: 0.9rem;
+    color: #666;
+}
+.sobre-nosotros .team-member a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 600;
+}
+.sobre-nosotros .team-member a:hover {
+    text-decoration: underline;
+}
+
+/* --- MISIÓN, VISIÓN, VALORES --- */
+.sobre-nosotros .mission,
+.sobre-nosotros .vision {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+.sobre-nosotros .mission h2,
+.sobre-nosotros .vision h2 {
+    font-size: 1.5rem;
+    color: #005fa3;
+    margin-bottom: 15px;
+}
+.sobre-nosotros .mission p,
+.sobre-nosotros .vision p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.sobre-nosotros .mission ul,
+.sobre-nosotros .vision ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.sobre-nosotros .mission ul li,
+.sobre-nosotros .vision ul li {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+.sobre-nosotros .mission a,
+.sobre-nosotros .vision a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ff4d00;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    transition: all 0.2s;
+}
+.sobre-nosotros .mission a:hover,
+.sobre-nosotros .vision a:hover {
+    text-decoration: underline;
+}
+
+/* --- VALORES --- */
+.sobre-nosotros .values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+.sobre-nosotros .value {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+.sobre-nosotros .value h3 {
+    font-size: 1.2rem;
+    color: #0077cc;
+    margin-bottom: 10px;
+}
+.sobre-nosotros .value p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+.sobre-nosotros .value a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 600;
+}
+.sobre-nosotros .value a:hover {
+    text-decoration: underline;
+}
+
+/* --- CONTACTO --- */
+.sobre-nosotros .contact {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+}
+.sobre-nosotros .contact h2 {
+    font-size: 1.5rem;
+    color: #005fa3;
+    margin-bottom: 15px;
+}
+.sobre-nosotros .contact p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.sobre-nosotros .contact a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 600;
+}
+.sobre-nosotros .contact a:hover {
+    text-decoration: underline;
+}
+.sobre-nosotros .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.sobre-nosotros .contact form input,
+.sobre-nosotros .contact form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* --- BLOQUE SOBRE --- */
+.bloque-sobre {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 60px 0;
+    padding: 0;
+    border: none;
+}
+.bloque-sobre:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.bloque-sobre .texto {
+    flex: 1 1 50%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.bloque-sobre .imagen {
+    flex: 1 1 45%;
+    text-align: center;
+}
+.bloque-sobre .imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 1024px) {
+    .bloque-sobre {
+        flex-direction: column !important;
+        gap: 20px;
+        margin: 40px 0;
+        padding: 0 10px;
+    }
+    .bloque-sobre .texto,
+    .bloque-sobre .imagen {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    .sobre-nosotros {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sobre-nosotros {
+        margin: 30px 5px;
+        padding: 0 5px;
+    }
+    .sobre-nosotros h1 {
+        font-size: 1.8rem;
+    }
+    .sobre-nosotros p,
+    .bloque-sobre .texto {
+        font-size: 0.98rem;
+    }
+    .bloque-sobre {
+        gap: 15px;
+        margin: 30px 0;
+        padding: 0 2px;
+    }
+    .bloque-sobre .imagen img {
+        border-radius: 8px;
+    }
+    .sobre-nosotros .team,
+    .sobre-nosotros .values {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .sobre-nosotros .team-member,
+    .sobre-nosotros .value {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    .sobre-nosotros .mission,
+    .sobre-nosotros .vision,
+    .sobre-nosotros .contact {
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .sobre-nosotros .contact form input,
+    .sobre-nosotros .contact form textarea {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sobre-nosotros {
+        margin: 15px 2px;
+        padding: 0 2px;
+    }
+    .sobre-nosotros h1 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    .sobre-nosotros p,
+    .bloque-sobre .texto {
+        font-size: 0.9rem;
+    }
+    .bloque-sobre {
+        gap: 8px;
+        margin: 15px 0;
+        padding: 0 1px;
+    }
+    .bloque-sobre .imagen img {
+        border-radius: 6px;
+    }
+    .sobre-nosotros .team-member h3 {
+        font-size: 0.95rem;
+    }
+    .sobre-nosotros .team-member p {
+        font-size: 0.8rem;
+    }
+    .sobre-nosotros .mission h2,
+    .sobre-nosotros .vision h2,
+    .sobre-nosotros .contact h2 {
+        font-size: 1rem;
+    }
+    .sobre-nosotros .mission p,
+    .sobre-nosotros .vision p,
+    .sobre-nosotros .contact p {
+        font-size: 0.95rem;
+    }
+    .sobre-nosotros .team-member,
+    .sobre-nosotros .value {
+        max-width: 98vw;
+        padding: 10px;
+    }
+    .sobre-nosotros .contact form input,
+    .sobre-nosotros .contact form textarea {
+        padding: 8px;
+        font-size: 0.95rem;
+    }
+}
