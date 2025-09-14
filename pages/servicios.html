@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="servicios_titulo_pagina">Servicios - BefEnergy</title>
+    <link rel="icon" href="../assets/media/fondo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/comun.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/servicios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="logo" onclick="window.location.href='../index.html'">
+            <img src="../assets/media/fondo.png" alt="BefEnergy Logo">
+            <span data-i18n="logo_nombre">BefEnergy</span>
+        </div>
+        <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="../index.html" data-i18n="inicio">Inicio</a></li>
+                <li class="active"><a href="servicios.html" data-i18n="servicios">Servicios</a></li>
+                <li><a href="sobre-nosotros.html" data-i18n="sobre">Sobre Nosotros</a></li>
+                <li><a href="contacto.html" data-i18n="contacto">Contacto</a></li>
+                <li class="presupuesto-dropdown">
+                <button type="button" class="btn-presupuesto" id="presupuestoBtn" data-i18n="presupuesto">
+                Consigue tu presupuesto
+                </button>
+                <div id="opcionesCorreo" class="submenu-correo">
+                    <a class="btnGmail" href="mailto:admin@befenergy.com" data-i18n="contacto_btn_cliente">Usar cliente de correo</a>
+                    <a class="btnCorreo" href="https://mail.google.com/mail/?view=cm&fs=1&to=admin@befenergy.com" target="_blank" rel="noopener" data-i18n="contacto_btn_gmail">Abrir Gmail</a>
+                </div>
+            </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-slider hero-slider-full">
+            <div class="slider-fondo" id="sliderFondo">
+                <img src="../assets/media/slider-servicios.jpg" class="slide activo" alt="Energía 1">
+            </div>
+            <div class="hero-contenido">
+                <h1 class="titulo-centrado" data-i18n="servicios_titulo">Servicios</h1>
+                <h1 data-i18n="servicios_subtitulo">Descubre <span class="amarillo">nuestros servicios</span> de energía renovable</h1>
+            </div>
+        </section>
+
+        <div class="servicio-estadisticas fade-in">
+            <div class="estadistica-box">
+            <span class="numero-contador" data-target="500" data-prefix="+">420</span>
+            <p data-i18n="satisfechos_titulo">Clientes satisfechos</p>
+            </div>
+            <div class="estadistica-box">
+            <span class="numero-contador" data-target="3" data-prefix="+">0</span>
+            <p data-i18n="experiencia_titulo">Años de experiencia</p>
+            </div>
+            <div class="estadistica-box">
+            <span class="numero-contador" data-target="100" data-prefix="%">0</span>
+            <p data-i18n="sostenibilidad_titulo">Compromiso con la sostenibilidad</p>
+            </div>
+           
+        </div>
+
+
+
+        <section class="contenido-pagina fade-in">
+          <div class="servicios-grid">
+
+            <!-- Fotovoltaica -->
+            <article class="servicio-bloque fotovoltaica img-left">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="servicio-imagen">
+                      <img src="../assets/media/fotovoltaiques.png" alt="Fotovoltaica">
+                    </div>
+                    <div class="servicio-texto">
+                      <h2 data-i18n="titulo_fotovoltaica">Fotovoltaica</h2>
+                      <button class="flip-btn-movil" aria-label="Leer más">
+                        <span>Leer más</span>
+                        <svg class="icon-arrow" viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="servicio-texto">
+                      <h3 data-i18n="subtitulo_fotovoltaica">Sobre Fotovoltaica</h3>
+                      <p data-i18n="texto_fotovoltaica">La fotovoltaica convierte la <span class="naranja">energía solar</span> en <span class="naranja">electricidad</span> mediante paneles solares. Es una fuente de <span class="naranja">energía renovable</span>, <span class="naranja">limpia</span> y <span class="naranja">sostenible</span> que permite <span class="naranja">ahorrar en la factura eléctrica</span> y <span class="naranja">reducir emisiones de CO₂</span>.</p>
+                      <button class="flip-btn-movil flip-back-btn" aria-label="Volver">
+                        <span data-i18n="boton_volver">Volver</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Aerotermia -->
+            <article class="servicio-bloque aerotermia img-right">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="servicio-imagen">
+                      <img src="../assets/media/aereotermia.jpg" alt="Aerotermia">
+                    </div>
+                    <div class="servicio-texto">
+                      <h2 data-i18n="titulo_aereotermia">Aerotermia</h2>
+                      <button class="flip-btn-movil" aria-label="Leer más">
+                        <span data-i18n="boton_mas">Leer más</span>
+                        <svg class="icon-arrow" viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="servicio-texto">
+                      <h3 data-i18n="subtitulo_aereotermia">Sobre Aerotermia</h3>
+                        <p data-i18n="texto_aereotermia">
+                        Las <span class="amarillo">soluciones de aerotermia</span> ofrecen <span class="amarillo">calefacción</span>, <span class="amarillo">refrigeración</span> y <span class="amarillo">agua caliente</span> de forma <span class="amarillo">eficiente</span> y <span class="amarillo">sostenible</span>, aprovechando la <span class="amarillo">energía del aire</span> como recurso natural.  
+                        Esta tecnología permite <span class="amarillo">reducir el consumo energético</span>, <span class="amarillo">disminuir emisiones de CO₂</span> y <span class="amarillo">ahorrar en la factura</span>, logrando un <span class="amarillo">hogar más confortable y respetuoso con el medioambiente</span>.
+                        </p>
+                      <button class="flip-btn-movil flip-back-btn" aria-label="Volver">
+                        <span data-i18n="boton_volver">Volver</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Calefacción -->
+            <article class="servicio-bloque calefaccion img-left">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="servicio-imagen">
+                      <img src="../assets/media/calefaccion.jpg" alt="Calefacción">
+                    </div>
+                    <div class="servicio-texto">
+                      <h2 data-i18n="titulo_calefaccion">Calefacción</h2>
+                      <button class="flip-btn-movil" aria-label="Leer más">
+                        <span data-i18n="boton_mas">Leer más</span>
+                        <svg class="icon-arrow" viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="servicio-texto">
+                      <h3 data-i18n="subtitulo_calefaccion">Sobre Calefacción</h3>
+                        <p data-i18n="texto_calefaccion">
+                        Instalamos <span class="naranja">sistemas de calefacción</span> <span class="naranja">ecológicos</span> y <span class="naranja">económicos</span>, adaptados a las <span class="naranja">necesidades de cada espacio</span>.  
+                        Nuestras soluciones permiten <span class="naranja">ahorrar en la factura energética</span> y <span class="naranja">reducir el impacto ambiental</span>, garantizando un <span class="naranja">confort térmico eficiente</span> durante todo el año.
+                        </p>
+                      <button class="flip-btn-movil flip-back-btn" aria-label="Volver">
+                        <span data-i18n="boton_volver">Volver</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Mantenimiento -->
+            <article class="servicio-bloque mantenimiento img-right">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="servicio-imagen">
+                      <img src="../assets/media/mantenimiento.JPG" alt="Mantenimiento">
+                    </div>
+                    <div class="servicio-texto">
+                      <h2 data-i18n="titulo_mantenimiento">Mantenimiento</h2>
+                      <button class="flip-btn-movil" aria-label="Leer más">
+                        <span data-i18n="boton_mas">Leer más</span>
+                        <svg class="icon-arrow" viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="servicio-texto">
+                      <h3 data-i18n="subtitulo_mantenimiento">Sobre Mantenimiento</h3>
+                        <p data-i18n="texto_mantenimiento">
+                        Ofrecemos <span class="amarillo">planes de mantenimiento</span> <span class="amarillo">preventivo</span> y <span class="amarillo">correctivo</span> para garantizar el <span class="amarillo">rendimiento óptimo</span> y la <span class="amarillo">máxima eficiencia</span> de tus <span class="amarillo">instalaciones energéticas</span>.  
+                        Con un buen mantenimiento, <span class="amarillo">evitas averías</span>, <span class="amarillo">prolongas la vida útil</span> de los equipos y <span class="amarillo">ahorras en reparaciones costosas</span>.
+                        </p>
+                      <button class="flip-btn-movil flip-back-btn" aria-label="Volver">
+                        <span data-i18n="boton_volver">Volver</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Asesoramiento -->
+            <article class="servicio-bloque asesoramiento img-left">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="servicio-imagen">
+                      <img src="../assets/media/asesoramiento.jpg" alt="Asesoramiento">
+                    </div>
+                    <div class="servicio-texto">
+                      <h2 data-i18n="titulo_asesoramiento">Asesoramiento</h2>
+                      <button class="flip-btn-movil" aria-label="Leer más">
+                        <span data-i18n="boton_mas">Leer más</span>
+                        <svg class="icon-arrow" viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="servicio-texto">
+                      <h3 data-i18n="subtitulo_asesoramiento">Sobre Asesoramiento</h3>
+                      <p data-i18n="texto_asesoramiento">
+                      Brindamos <span class="naranja">asesoramiento experto</span> para ayudarte a <span class="naranja">tomar decisiones informadas</span> sobre tus <span class="naranja">necesidades energéticas</span>.  
+                      Te guiamos en la <span class="naranja">elección de las mejores soluciones</span> para <span class="naranja">ahorrar energía</span>, <span class="naranja">reducir costes</span> y <span class="naranja">optimizar el rendimiento</span> de tus instalaciones.
+                      </p>
+                      <button class="flip-btn-movil flip-back-btn" aria-label="Volver">
+                        <span data-i18n="boton_volver">Volver</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Compromiso y confianza -->
+            <article class="servicio-bloque compromiso img-right">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="servicio-imagen">
+                      <img src="../assets/media/profesionalidad.jpg" alt="Compromiso y confianza">
+                    </div>
+                    <div class="servicio-texto">
+                      <h2 data-i18n="titulo_compromiso">Compromiso y confianza</h2>
+                      <button class="flip-btn-movil" aria-label="Leer más">
+                        <span data-i18n="boton_mas">Leer más</span>
+                        <svg class="icon-arrow" viewBox="0 0 24 24"><path d="M8 5l8 7-8 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="servicio-texto">
+                      <h3 data-i18n="subtitulo_compromiso">Sobre Compromiso y confianza</h3>
+                        <p data-i18n="texto_compromiso">
+                        Nos <span class="amarillo">implicamos en cada proyecto</span> como si fuera <span class="amarillo">único</span>, ofreciendo un <span class="amarillo">trato cercano</span>, <span class="amarillo">asesoramiento personalizado</span> y un <span class="amarillo">servicio técnico profesional</span> para garantizar la <span class="amarillo">máxima satisfacción del cliente</span>.  
+                        Nuestro <span class="amarillo">compromiso</span> es acompañarte en todo el proceso, asegurando <span class="amarillo">calidad</span>, <span class="amarillo">eficiencia</span> y <span class="amarillo">resultados óptimos</span>.
+                        </p>
+                      <button class="flip-btn-movil flip-back-btn" aria-label="Volver">
+                        <span data-i18n="boton_volver">Volver</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="pie-contenido">
+            <div class="pie-col">
+                <h4 data-i18n="footer_contacto">Contacto</h4>
+                <p data-i18n="footer_email">admin@befenergy.com<br></p>
+                <a href="tel:+34 931 31 56 36" data-i18n="footer_telefono">+34 93 131 56 36</a>
+            </div>
+            <div class="pie-col">
+                <h4 data-i18n="footer_leido">Lo más leído</h4>
+                <a href="../index.html#faq" data-i18n="footer_faq">Preguntas frecuentes</a><br />
+            </div>
+            <div class="pie-col">
+                <h4 data-i18n="footer_unete">Únete</h4>
+                <a href="contacto.html#cont" data-i18n="footer_trabaja">Trabaja con nosotros</a>
+            </div>
+            <div class="pie-col">
+                <h4 data-i18n="footer_siguenos">Síguenos</h4>
+                <a href="https://x.com/befenergy" target="_blank" data-i18n="footer_twitter">Twitter</a>
+            </div>
+            <div class="pie-logo">
+                <img src="../assets/media/logo-fondo.png" alt="BefEnergy Logo" class="footer-logo" loading="lazy">
+            </div>
+        </div>
+        <div class="copyright" data-i18n="footer_copyright">
+            © 2025 BefEnergy. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Botón flotante de idioma -->
+    <div class="idioma-float">
+      <button class="idioma-float-btn" id="idiomaFloatBtn" aria-label="Seleccionar idioma">
+        <img id="idiomaFloatIcon" src="../assets/flags/es.svg" alt="Idioma actual" class="idioma-float-bandera">
+      </button>
+      <div class="idioma-float-menu" id="idiomaFloatMenu">
+        <button class="idioma-float-opcion" data-lang="es" aria-label="Español">
+          <img src="../assets/flags/es.svg" alt="Español" class="idioma-float-bandera">
+        </button>
+        <button class="idioma-float-opcion" data-lang="ca" aria-label="Català">
+          <img src="../assets/flags/ca.svg" alt="Català" class="idioma-float-bandera">
+        </button>
+        <button class="idioma-float-opcion" data-lang="en" aria-label="English">
+          <img src="../assets/flags/en.svg" alt="English" class="idioma-float-bandera">
+        </button>
+      </div>
+    </div>
+
+    <!-- Banner de cookies -->
+    <div id="cookieBanner" class="cookie-banner">
+      <div class="cookie-banner-content">
+        <span data-i18n="cookie_text">
+          Utilizamos cookies técnicas para recordar tu idioma seleccionado. Al mostrar el mapa de Google Maps, Google puede establecer cookies de terceros. No usamos cookies de seguimiento propias.
+        </span>
+        <button id="cookieAcceptBtn" class="cookie-btn" data-i18n="cookie_accept">Aceptar</button>
+      </div>
+    </div>
+    <script>
+    document.querySelectorAll('.flip-card').forEach(card => {
+      // Click en el bloque (desktop)
+      card.addEventListener('click', function(e) {
+        // Evita que el botón móvil propague el evento
+        if (e.target.classList.contains('flip-btn-movil')) return;
+        if (window.innerWidth > 768) {
+          card.classList.toggle('flipped');
+        }
+      });
+      // Click en el botón móvil (front)
+      card.querySelector('.flip-btn-movil:not(.flip-back-btn)').addEventListener('click', function(e) {
+        e.stopPropagation();
+        card.classList.add('flipped');
+      });
+      // Click en el botón móvil (back)
+      card.querySelector('.flip-back-btn').addEventListener('click', function(e) {
+        e.stopPropagation();
+        card.classList.remove('flipped');
+      });
+    });
+    </script>
+    <script src="../assets/js/coverflow.js"></script>
+    <script src="../assets/js/slider.js"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/idioma-switch.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
